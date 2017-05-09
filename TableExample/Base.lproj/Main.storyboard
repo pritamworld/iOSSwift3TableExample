@@ -223,10 +223,11 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.54589332459999995" green="0.021812864500000001" blue="0.05380217533" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="lblDummy" destination="Mim-nP-FY8" id="Amk-6H-phM"/>
+                        <outlet property="myNavigationBar" destination="TCN-21-EYz" id="baa-JQ-WAf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVy-E1-R54" userLabel="First Responder" sceneMemberID="firstResponder"/>

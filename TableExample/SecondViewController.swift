@@ -17,6 +17,7 @@ class SecondViewController: UIViewController {
     
     
     
+    @IBOutlet weak var myNavigationBar: UINavigationBar!
     @IBOutlet weak var lblDummy: UILabel!
     var i:Int=0
     var screenWidth:CGFloat=0
@@ -28,6 +29,17 @@ class SecondViewController: UIViewController {
         i = 100;
         NotificationCenter.default.addObserver(self, selector: #selector(SecondViewController.rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         // Do any additional setup after loading the view.
+        
+        /*
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.view.backgroundColor = UIColor.clear
+        */
+        myNavigationBar.setBackgroundImage(UIImage(), for: .default)
+        myNavigationBar.shadowImage = UIImage()
+        myNavigationBar.isTranslucent = true
+        //myNavigationBar.inputView?.backgroundColor = UIColor.clear
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
