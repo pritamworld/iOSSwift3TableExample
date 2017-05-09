@@ -14,6 +14,7 @@ protocol MyProtocol {
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var lblDummy: UILabel!
     var i:Int=0
     var screenWidth:CGFloat=0
     var screenHeight:CGFloat=0
@@ -30,9 +31,11 @@ NotificationCenter.default.addObserver(self, selector: #selector(SecondViewContr
         if UIDevice.current.orientation.isLandscape {
             print("Landscape %d",i)
             i = 200
+            lblDummy.isHidden = true
         } else {
             print("Portrait %d",i)
             i = 300
+             lblDummy.isHidden = false
         }
         getScreenSize()
     }
