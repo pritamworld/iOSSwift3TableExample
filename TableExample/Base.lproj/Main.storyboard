@@ -204,6 +204,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCN-21-EYz">
+                                <frame key="frameInset" minY="20" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="PlV-GE-GQf">
+                                        <barButtonItem key="leftBarButtonItem" title="Facebook" id="UZs-da-5Sh">
+                                            <connections>
+                                                <action selector="shareFacebook:" destination="Awk-Xh-8tI" id="8eX-Zt-ThJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Twitter" id="hYC-Mf-bXA">
+                                            <connections>
+                                                <action selector="shareTwitter:" destination="Awk-Xh-8tI" id="cZQ-bH-0oy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -213,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVy-E1-R54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645.60000000000002" y="638.2308845577212"/>
+            <point key="canvasLocation" x="652" y="653"/>
         </scene>
     </scenes>
 </document>
