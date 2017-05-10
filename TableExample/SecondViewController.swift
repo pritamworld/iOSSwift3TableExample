@@ -23,6 +23,9 @@ class SecondViewController: UIViewController {
     var screenWidth:CGFloat=0
     var screenHeight:CGFloat=0
     var delegate: MyProtocol? = nil;
+    
+    //Notification Declaration
+    let myNotification = Notification.Name(rawValue:"MyNotification")
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Changed")
@@ -40,6 +43,11 @@ class SecondViewController: UIViewController {
         myNavigationBar.shadowImage = UIImage()
         myNavigationBar.isTranslucent = true
         //myNavigationBar.inputView?.backgroundColor = UIColor.clear
+        
+        //Add Notification Observer
+        let nc = NotificationCenter.default
+        nc.addObserver(forName:myNotification, object:nil, queue:nil, using:catchNotification)
+        
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -169,5 +177,30 @@ class SecondViewController: UIViewController {
         
     }
     
+    @IBAction func sendNotification(_ sender: AnyObject) {
+        let nc = NotificationCenter.default
+        nc.post(name:myNotification,
+                object: nil,
+                userInfo:["message":"Hello there!", "date":Date()])
+    }
+    
+    //Notification Handing function
+    func catchNotification(notification:Notification) -> Void {
+        print("Catch notification")
+        
+        guard let userInfo = notification.userInfo,
+            let message  = userInfo["message"] as? String,
+            let date     = userInfo["date"]    as? Date else {
+                print("No userInfo found in notification")
+                return
+        }
+        
+        let alert = UIAlertController(title: "Notification!",
+                                      message:"\(message) received at \(date)",
+            preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     
 }

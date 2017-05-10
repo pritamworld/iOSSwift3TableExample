@@ -222,6 +222,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM0-Wz-eI8">
+                                <frame key="frameInset" minX="102" minY="505" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Send Notification"/>
+                                <connections>
+                                    <action selector="sendNotification:" destination="Awk-Xh-8tI" eventType="touchUpInside" id="kyQ-fZ-cUz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.54589332459999995" green="0.021812864500000001" blue="0.05380217533" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -232,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVy-E1-R54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="653"/>
+            <point key="canvasLocation" x="652" y="652.62368815592208"/>
         </scene>
     </scenes>
 </document>
