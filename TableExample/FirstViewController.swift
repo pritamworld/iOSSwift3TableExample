@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class FirstViewController: UIViewController, MyProtocol {
 
@@ -45,5 +46,32 @@ class FirstViewController: UIViewController, MyProtocol {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            lblMessage.text = "Shaken, not stirred"
+        }
+    }
+    
+    @IBAction func postToFacebook(_ sender: Any) {
+        // 1
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
+            // 2
+            if let controller = SLComposeViewController(forServiceType: SLServiceTypeFacebook) {
+                // 3
+                controller.setInitialText("Testing Posting to Facebook")
+                // 4
+                self.present(controller, animated:true, completion:nil)
+            }
+        }
+        else {
+            // 3
+            print("no Facebook account found on device")
+        }
+    }
 
 }

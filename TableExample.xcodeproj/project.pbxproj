@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2835DB4A1EC3A32E002BC7DD /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835DB491EC3A32E002BC7DD /* SlideMenuController.swift */; };
 		289371AB1EC0EDFA0008F002 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289371AA1EC0EDFA0008F002 /* FirstViewController.swift */; };
 		289371AD1EC0EE080008F002 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289371AC1EC0EE080008F002 /* SecondViewController.swift */; };
 		BFA2DA261D9002090007911F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA2DA251D9002090007911F /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2835DB491EC3A32E002BC7DD /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		289371AA1EC0EDFA0008F002 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		289371AC1EC0EE080008F002 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		BFA2DA221D9002090007911F /* TableExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 				BFE0F8081D90411600C8074A /* FruitsTableViewController.swift */,
 				289371AA1EC0EDFA0008F002 /* FirstViewController.swift */,
 				289371AC1EC0EE080008F002 /* SecondViewController.swift */,
+				2835DB491EC3A32E002BC7DD /* SlideMenuController.swift */,
 			);
 			path = TableExample;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				289371AD1EC0EE080008F002 /* SecondViewController.swift in Sources */,
+				2835DB4A1EC3A32E002BC7DD /* SlideMenuController.swift in Sources */,
 				289371AB1EC0EDFA0008F002 /* FirstViewController.swift in Sources */,
 				BFA2DA261D9002090007911F /* AppDelegate.swift in Sources */,
 				BFE0F8091D90411600C8074A /* FruitsTableViewController.swift in Sources */,

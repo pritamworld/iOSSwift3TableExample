@@ -37,4 +37,12 @@ class FruitsTableViewController: UITableViewController {
         return cell
     }
     
+    //Deleting from table callback
+    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            fruits.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
+        }
+    }
+    
 }
